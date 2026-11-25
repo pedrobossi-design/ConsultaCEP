@@ -114,10 +114,11 @@ class _TelaCepState extends State<TelaCep> {
           child: const Text('Consultar'),
               ),
               SizedBox(height: 16.0,),
-                Divider(
+                
+                if (_endereco != null) ...[
+                  Divider(
                   color: Colors.lightGreen,
                 ),
-                if (_endereco != null) ...[
                     _linha('CEP', 'cep'),
                     _linha('Rua', 'logradouro'),
                     _linha('Complemento', 'complemento'),
@@ -131,10 +132,10 @@ class _TelaCepState extends State<TelaCep> {
                     _linha('GIA', 'gia'),
                     _linha('DDD', 'ddd'),
                     _linha('SIAFI', 'siafi'),
-                ],
-                Divider(
+                  Divider(
                   color: Colors.lightGreen,
                 ),
+                ],
               ],
             ),
           ) 
